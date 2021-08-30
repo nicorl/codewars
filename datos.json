@@ -1,0 +1,16 @@
+{
+    "config1": 
+        {
+            "setpoint":5,
+            "otro": 10
+        },
+    "config2": 
+        {
+            "setpoint":3,
+            "otro": 3
+        },
+    "autor":
+        {
+            "nombre":"Manolo Bergillos"
+        }
+}
