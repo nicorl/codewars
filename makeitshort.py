@@ -6,6 +6,11 @@ def abbreviate(s):
     # Split por guion y por espacio
     x = re.finditer('-', s)
     guiones = [match.start() for match in x]
+    caracteresraros = []
+    for l, m in enumerate(s):
+        if (not m.isalnum()):
+            caracteresraros.append(l)
+    print(caracteresraros)
     print(guiones)
     s2 = re.split(' | |-', s)
     s3 = ''
@@ -19,7 +24,7 @@ def abbreviate(s):
             for i, c in enumerate(cadena):
                 if (c.isalnum()):
                     cadena2 += cadena[i]
-                    # luego habría que meter de nuevo el caracter raro!
+                    # luego habria que meter de nuevo el caracter raro!
             # acortar
             cadcort = ''
             for contar, letra in enumerate(cadena2):
