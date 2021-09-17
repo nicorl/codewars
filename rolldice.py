@@ -48,6 +48,10 @@ def veces(num):
         arr.append(cara*num)
     return arr
 
+def nested(num):
+    posibilidades = [1,2,3,4,5,6]
+    for i in range(1,num+1):
+        
 
 #print(rolldice_sum_prob(5, 2))
 # print(veces(2))
