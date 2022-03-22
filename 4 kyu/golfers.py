@@ -1,7 +1,9 @@
     #https://www.codewars.com/kata/556c04c72ee1147ff20000c9/train/python
 def valid(a):
-    if tamaniosOK(a):
-        pass
+    if tam(a):
+        for x in a:
+            if tam(x):
+                pass
     for listadeldia in a:
         for equipo in listadeldia:
             for golfer in equipo:
@@ -18,7 +20,7 @@ def norepiteenelmismodia(golfer, listadeldia):
         for golf in equipo:
             if equipo.count(golf) > 1: 
                 return False
-            for i in range(0,len(listadeldia)):
+            for i in range(0,len(listapytdeldia)):
                 if golf in listadeldia[i]:
                     valor += 1
                     if valor > 1:
@@ -39,17 +41,17 @@ def saletodoslosdias(golfer, listacompleta):
             return False
     return True
 
-def tamaniosOK(listacompleta):
-    it1 = iter(listacompleta)
-    the_len1 = len(next(it1))
-    if not all(len(d) == the_len1 for d in it1):
+
+def tam(lista):
+    iterador1 = iter(lista)
+    longitudlc = len(next(iterador1))
+    lc = []
+    for i in range(0,len(lista)):
+        lc.append(len(lista[i]))
+    if lc.count(lc[0]) == len(lc):
+        return True
+    else:
         return False
-    for listadeldia in listacompleta:
-        it = iter(listadeldia)
-        the_len = len(next(it))
-        if not all(len(l) == the_len for l in it):
-            return False
-    return True
 
 
 def contraquienjuega(golfer, listacompleta):
@@ -62,9 +64,8 @@ def contraquienjuega(golfer, listacompleta):
     return contrincantes
 
 def todos_los_del_dia(listadeldia):
-    for equipo in listadeldia:
-        lista = ''.join(equipo)
-        return lista
+    lista = ''.join(listadeldia)
+    return lista
 
 
 
@@ -84,7 +85,7 @@ t = ['ABCD', 'EFGH', 'IJKL', 'MNOP', 'QRST']
 
 
 
-s = [
+w = [
     ["AB", "CD", "EF", "GH"],
     ["AC", "BD", "EG", "FH"],
     ["AD", "CE"],
@@ -96,6 +97,6 @@ z = [
 
 #print(norepiteenelmismodia('A', t))
 #print(saletodoslosdias('A', z))
-#print(tamaniosOK(a))
+#print(tam(w))
 #print(contraquienjuega('A',a))
-print(todos_los_del_dia(a))
+#print(todos_los_del_dia(a[0]))
